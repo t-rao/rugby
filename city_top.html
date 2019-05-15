@@ -87,11 +87,20 @@
           </ul>
         </div>
   </section>
+  <section class="container">
+      <select name='org_id' class="fillters">
+              <option value="all" data-filter="all">All</option>
+              <option value="hdpe" data-filter="hdpe">HDPE Pipes</option>
+              <option value="sprinkle" data-filter="sprinkle">Sprinkle Pipes</option>
+              <option value="spray" data-filter="spray">Spray Nozzle</option>
+              <option value="irrigation" data-filter="irrigation">Irrigation Pipes</option>
+            </select>
+  </section>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active venu" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
       <div class="container mt-5">
         <div class="row">
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter hdpe">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -123,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter hdpe">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -155,7 +164,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter sprinkle">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -187,7 +196,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter sprinkle">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -219,9 +228,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-6 col-lg-3 col-md-6">
+
+          <div class="col-6 col-lg-3 col-md-6 filter spray">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -253,7 +261,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter spray">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -285,7 +293,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -317,7 +325,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -349,9 +357,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-6 col-lg-3 col-md-6">
+        
+          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -383,7 +390,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -415,7 +422,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -447,7 +454,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6">
+          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -499,11 +506,12 @@
 
  gtag('config', 'UA-139056125-1');
 </script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&size=480x360"> </script> -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&callback=initMap">
   </script>
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/script.js" charset="utf-8"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
