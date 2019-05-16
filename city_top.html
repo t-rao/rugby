@@ -17,6 +17,8 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand ruby" href="#">Japan Rugby Special</a>
+        <h4 class="city_subtitle">Things to do in the 12 cities <br>
+THE RUGBY MATCHES</h4>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +33,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  STADIUM
+                  STADIUM <i class=""> <img src="img/caret2x.png" alt=""></i>
                 </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#"><span>1</span> Sapporo Dome</a>
@@ -50,7 +52,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  CITY
+                  CITY <i class=""> <img src="img/caret2x.png" alt=""></i>
                 </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item active" href="#">Yokohama</a>
@@ -76,31 +78,38 @@
   </section>
 
   <section class="container">
-        <div class="tab_container">
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img src="img/picture_view_disable.png" alt=""></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="img/map_view.png" alt=""></a>
-            </li>
-          </ul>
+    <div class="tab_container">
+      <div class="inner_tab_container">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img src="img/picture_view_disable.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="img/map_view.png" alt=""></a>
+          </li>
+        </ul>
+        <div class="drop_down_filter">
+          <select name='org_id' class="fillters">
+            <option value="all" data-filter="all">All</option>
+            <option value="Restaurant_Cafe" data-filter="hdpe">Restaurant&Cafe</option>
+            <option value="Art_Culture" data-filter="Art_Culture">Art&Culture</option>
+            <option value="Shopping" data-filter="Shopping">Shopping</option>
+            <option value="Nightlife" data-filter="Nightlife">Nightlife</option>
+          </select>
         </div>
-  </section>
-  <section class="container">
-      <select name='org_id' class="fillters">
-              <option value="all" data-filter="all">All</option>
-              <option value="hdpe" data-filter="hdpe">HDPE Pipes</option>
-              <option value="sprinkle" data-filter="sprinkle">Sprinkle Pipes</option>
-              <option value="spray" data-filter="spray">Spray Nozzle</option>
-              <option value="irrigation" data-filter="irrigation">Irrigation Pipes</option>
-            </select>
+        <p class="plus">+</p>
+        <div class="checkbox">
+          <input type='checkbox' name='thing' value='valuable' id="thing"/><label for="thing"></label>
+        </div>
+        <p class="kids_lable">Kids Friendly <img src="img/kid_icon.jpg" alt=""></p>
+      </div>
+        </div>
   </section>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active venu" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
       <div class="container mt-5">
         <div class="row">
-          <div class="col-6 col-lg-3 col-md-6 filter hdpe">
+          <div class="col-6 col-lg-3 col-md-6 filter Restaurant_Cafe">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -110,7 +119,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -132,9 +141,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter hdpe">
+          <div class="col-6 col-lg-3 col-md-6 filter Art_Culture">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
+              <p class="aculture">Art & Culture</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
             </div>
             <div class="container_venu">
@@ -142,7 +151,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -164,17 +173,17 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter sprinkle">
+          <div class="col-6 col-lg-3 col-md-6 filter Shopping">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
-              <div><img src="img/kid_icon.jpg" alt=""></div>
+              <p class="shopping">Shopping</p>
+              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -196,17 +205,17 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter sprinkle">
+          <div class="col-6 col-lg-3 col-md-6 filter Nightlife">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
-              <div><img src="img/kid_icon.jpg" alt=""></div>
+              <p class="nlife">Nightlife</p>
+              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -229,17 +238,17 @@
             </div>
           </div>
 
-          <div class="col-6 col-lg-3 col-md-6 filter spray">
+          <div class="col-6 col-lg-3 col-md-6 filter Art_Culture">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
-              <div><img src="img/kid_icon.jpg" alt=""></div>
+              <p class="aculture">Art & Culture</p>
+              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -261,7 +270,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter spray">
+          <div class="col-6 col-lg-3 col-md-6 filter Restaurant_Cafe">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -271,7 +280,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -293,17 +302,17 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter">
+          <div class="col-6 col-lg-3 col-md-6 filter Shopping">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
-              <div><img src="img/kid_icon.jpg" alt=""></div>
+              <p class="shopping">Shopping</p>
+              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -325,9 +334,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
+          <div class="col-6 col-lg-3 col-md-6 filter Shopping">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
+              <p class="shopping">Shopping</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
             </div>
             <div class="container_venu">
@@ -335,7 +344,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -357,8 +366,8 @@
               </div>
             </div>
           </div>
-        
-          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
+
+          <div class="col-6 col-lg-3 col-md-6 filter Restaurant_Cafe">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -368,7 +377,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -390,9 +399,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
+          <div class="col-6 col-lg-3 col-md-6 filter Art_Culture">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
+              <p class="aculture">Art & Culture</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
             </div>
             <div class="container_venu">
@@ -400,7 +409,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -422,9 +431,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
+          <div class="col-6 col-lg-3 col-md-6 filter Shopping">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
+              <p class="shopping">Shopping</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
             </div>
             <div class="container_venu">
@@ -432,7 +441,7 @@
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -454,17 +463,17 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3 col-md-6 filter irrigation">
+          <div class="col-6 col-lg-3 col-md-6 filter Nightlife">
             <div class="filler_info">
-              <p class="resta">Restaurant/Cafe</p>
-              <div><img src="img/kid_icon.jpg" alt=""></div>
+              <p class="nlife">Nightlife</p>
+              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
               <a href="" class="readmore">Read more</a>
               <div class="venu_name">
                 <p>Venue name:</p>
@@ -499,13 +508,16 @@
     </div>
   </footer>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139056125-1"></script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
- gtag('config', 'UA-139056125-1');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139056125-1');
+  </script>
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&size=480x360"> </script> -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&callback=initMap">
   </script>

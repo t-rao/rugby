@@ -72,8 +72,8 @@ $(document).ready(function(){
 
 
     $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
 
+        var value = $(this).attr('data-filter');
         if(value == "all")
         {
             //$('.filter').removeClass('hidden');
@@ -95,3 +95,29 @@ $(this).removeClass("active");
 $(this).addClass("active");
 
 });
+
+
+
+
+
+$(document).ready(function(){
+       $('input[type="checkbox"]').click(function(){
+           if($(this).prop("checked") == true){
+           }
+           else if($(this).prop("checked") == false){
+               
+           }
+       });
+   });
+
+$('.readmore').click(function(){
+  event.preventDefault();
+
+  var $el = $(this);
+  var $p = $el.parent();
+if($p.children('h3+p')){
+  console.log('yes');
+  $p.children('h3+p').toggleClass('venu_dis_visible venu_dis_invisible');
+}
+  // $p.children('.venu_dis_visible').css( 'height', '90px' );
+})
