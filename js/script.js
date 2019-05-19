@@ -148,6 +148,40 @@ function initMap() {
     content: contentString
   });
 var iconBase = 'https://t-rao.github.io/rugby/img/';
+
+
+var icons = {
+          restaurant: {
+            icon: iconBase + 'cafe.png'
+          },
+          culture: {
+            icon: iconBase + 'culture.png'
+          },
+          shopping: {
+            icon: iconBase + 'shopping.png'
+          },
+          nightlife: {
+            icon: iconBase + 'night_life.png'
+          }
+        };
+
+        var features = [
+                  {
+                    position: new google.maps.LatLng(35.508693, 139.614835),
+                    type: 'restaurant'
+                  }, {
+
+                    position: new google.maps.LatLng(35.456997, 139.630669),
+                    type: 'culture'
+                  }, {
+                    position: new google.maps.LatLng(35.441302, 139.660771),
+                    type: 'shopping'
+                  }, {
+                    position: new google.maps.LatLng(35.447556, 139.638958),
+                    type: 'nightlife'
+                  }
+                ];
+
   var yokohama_stadium = {lat: 35.443346, lng: 139.640061};
   var marker = new google.maps.Marker({
       position: yokohama_stadium,
@@ -156,6 +190,16 @@ var iconBase = 'https://t-rao.github.io/rugby/img/';
       icon: iconBase + 'yoko_hama_gmap_pin.png',
       title: 'Yokohama Stadium'
     });
+
+    for (var i = 0; i < features.length; i++) {
+              var marker = new google.maps.Marker({
+                position: features[i].position,
+                icon: icons[features[i].type].icon,
+                map: map
+              });
+            };
+
+
     marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
