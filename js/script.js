@@ -140,14 +140,25 @@ function initMap() {
     mapTypeControl: false,
   });
 
-  var iconBase ='https://maps.google.com/mapfiles/kml/shapes/';
+  var contentString = '<div id="content">'+
+        '<h1>Yokohama Stadium</h1>'+
+        '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+var iconBase = 'https://t-rao.github.io/rugby/img/';
   var yokohama_stadium = {lat: 35.443346, lng: 139.640061};
   var marker = new google.maps.Marker({
       position: yokohama_stadium,
       animation: google.maps.Animation.DROP,
       map: map,
+      icon: iconBase + 'yoko_hama_gmap_pin.png',
       title: 'Yokohama Stadium'
     });
+    marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
 
 
     marker.setMap(map);
