@@ -152,16 +152,16 @@ var iconBase = 'https://t-rao.github.io/rugby/img/';
 
 var icons = {
           restaurant: {
-            icon: iconBase + 'cafe.png'
+            icon: iconBase + 'cafe2x.png'
           },
           culture: {
-            icon: iconBase + 'culture.png'
+            icon: iconBase + 'culture2x.png'
           },
           shopping: {
-            icon: iconBase + 'shopping.png'
+            icon: iconBase + 'shopping2x.png'
           },
           nightlife: {
-            icon: iconBase + 'night_life.png'
+            icon: iconBase + 'night_life2x.png'
           }
         };
 
@@ -183,7 +183,7 @@ var icons = {
                 ];
 
   var yokohama_stadium = {lat: 35.443346, lng: 139.640061};
-  var marker = new google.maps.Marker({
+  var markerstadium = new google.maps.Marker({
       position: yokohama_stadium,
       animation: google.maps.Animation.DROP,
       map: map,
@@ -200,7 +200,7 @@ var icons = {
             };
 
 
-    marker.addListener('click', function() {
+    markerstadium.addListener('click', function() {
     infowindow.open(map, marker);
   });
 
