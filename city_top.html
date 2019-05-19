@@ -17,8 +17,6 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand ruby" href="#">Japan Rugby Special</a>
-        <h4 class="city_subtitle">Things to do in the 12 cities <br>
-THE RUGBY MATCHES</h4>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +36,7 @@ THE RUGBY MATCHES</h4>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#"><span>1</span> Sapporo Dome</a>
                 <a class="dropdown-item" href="#"><span>2</span> Kamaishi Recovery Memorial Stadium</a>
-                <a class="dropdown-item" href="#"><span>3</span> Kumagaya Rugby Ground</a>
+                <a class="dropdown-item" href="#"><span>3</span> Kumagaya Rugby Stadium</a>
                 <a class="dropdown-item" href="#"><span>4</span> Tokyo Stadium</a>
                 <a class="dropdown-item" href="#"><span>5</span> International Stadium Yokohama</a>
                 <a class="dropdown-item" href="#"><span>6</span> Shizuoka Stadium Ecopa</a>
@@ -57,10 +55,6 @@ THE RUGBY MATCHES</h4>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item active" href="#">Yokohama</a>
                 <a class="dropdown-item" href="#">Saitama</a>
-                <a class="dropdown-item" href="#">Toyota</a>
-                <a class="dropdown-item" href="#">Kobe</a>
-                <a class="dropdown-item" href="#">...</a>
-                <a class="dropdown-item" href="#">...</a>
               </div>
             </li>
             <li class="nav-item">
@@ -82,34 +76,471 @@ THE RUGBY MATCHES</h4>
       <div class="inner_tab_container">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img src="img/picture_view_disable.png" alt=""></a>
+            <a class="nav-link active" id="pills-venu-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img src="img/picture_view.png" alt=""></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="img/map_view.png" alt=""></a>
+            <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="img/map_viewdisable.png" alt=""></a>
           </li>
         </ul>
-        <div class="drop_down_filter">
-          <select name='org_id' class="fillters">
-            <option value="all" data-filter="all">All</option>
-            <option value="Restaurant_Cafe" data-filter="hdpe">Restaurant&Cafe</option>
-            <option value="Art_Culture" data-filter="Art_Culture">Art&Culture</option>
-            <option value="Shopping" data-filter="Shopping">Shopping</option>
-            <option value="Nightlife" data-filter="Nightlife">Nightlife</option>
+        <div class="drop_down_filter" id="refine">
+          <select name='org_id' class="fillters category">
+            <option value="category">Category</option>
+            <option value="showall">All</option>
+            <option value="restaurant_cafe" >Restaurant/Cafe</option>
+            <option value="art_culture">Art & Culture</option>
+            <option value="shopping" >Shopping</option>
+            <option value="nightlife" >Bars & Nightlife</option>
+            <option value="things_to_do" >Things to do</option>
           </select>
         </div>
         <p class="plus">+</p>
         <div class="checkbox">
-          <input type='checkbox' name='thing' value='valuable' id="thing"/><label for="thing"></label>
+          <input type='checkbox' name='thing' value='kidplay' id="thing"/><label for="thing"></label>
         </div>
         <p class="kids_lable">Kids Friendly <img src="img/kid_icon.jpg" alt=""></p>
       </div>
         </div>
   </section>
+<section class="container">
+  <!-- <div id="refine">
+      <select class="category">
+        <option value="category">Category</option>
+          <option value="showall">Show all</option>
+          <option value="restaurant_cafe">Restaurant/Cafe</option>
+          <option value="art_culture">Art & Culture</option>
+          <option value="shopping">Shopping</option>
+          <option value="nightlife">Bars & Nightlife</option>
+          <option value="things_to_do">Things to do</option>
+      </select>
+      <input type="checkbox" value="kidplay">Kids Friendly
+  </div> -->
+
+  <!-- <ul>
+      <li data-category="restaurant_cafe" data-kidplay="t">Restaurant/Cafe</li>
+      <li data-category="restaurant_cafe" data-kidplay="f" >Restaurant/Cafe</li>
+      <li data-category="art_culture" data-kidplay="f" >Art & Culture</li>
+      <li data-category="art_culture" data-kidplay="t" >Art & Culture</li>
+      <li data-category="restaurant_cafe" data-kidplay="t" >Restaurant/Cafe</li>
+      <li data-category="restaurant_cafe" data-kidplay="f" >Restaurant/Cafe</li>
+      <li data-category="shopping" data-kidplay="t" >Shopping</li>
+      <li data-category="nightlife" data-kidplay="t" >Bars & Nightlife</li>
+      <li data-category="shopping" data-kidplay="f" >Shopping</li>
+      <li data-category="things_to_do" data-kidplay="t" >Things to do</li>
+  </ul> -->
+</section>
+
+
+
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active venu" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="tab-pane fade show active venu" id="pills-home" role="tabpanel" aria-labelledby="pills-venu-tab">
       <div class="container mt-5">
-        <div class="row">
-          <div class="col-12 col-lg-3 col-md-6 filter Restaurant_Cafe">
+         <ul class="row">
+            <li class="col-12 col-lg-3 col-md-6 " data-category="restaurant_cafe" data-kidplay="t">
+              <div class="filler_info">
+                <p class="resta">Restaurant/Cafe</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="art_culture" data-kidplay="t" >
+              <div class="filler_info">
+                <p class="aculture">Art & Culture</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="shopping" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="shopping">Shopping</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="nightlife" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="nlife">Nightlife</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="art_culture" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="aculture">Art & Culture</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="restaurant_cafe" data-kidplay="t" >
+              <div class="filler_info">
+                <p class="resta">Restaurant/Cafe</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li  class="col-12 col-lg-3 col-md-6 " data-category="shopping" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="shopping">Shopping</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li  class="col-12 col-lg-3 col-md-6 " data-category="shopping" data-kidplay="t" >
+              <div class="filler_info">
+                <p class="shopping">Shopping</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="restaurant_cafe" data-kidplay="t">
+              <div class="filler_info">
+                <p class="resta">Restaurant/Cafe</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="art_culture" data-kidplay="t" >
+              <div class="filler_info">
+                <p class="aculture">Art & Culture</p>
+                <div><img src="img/kid_icon.jpg" alt=""></div>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="shopping" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="shopping">Shopping</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+            <li class="col-12 col-lg-3 col-md-6 " data-category="nightlife" data-kidplay="f" >
+              <div class="filler_info">
+                <p class="nlife">Nightlife</p>
+              </div>
+              <div class="container_venu">
+                <div class="venu_pic">
+                  <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
+                </div>
+                <h3>Stay beneath the railway tracks</h3>
+                <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+                <div class="mob_d">
+                  <div class="venu_name">
+                    <p>Venue name:</p>
+                    <p>Tinys Yokohama Hinodecho</p>
+                  </div>
+                  <div class="venu_contact">
+                    <p>Contact:</p>
+                    <button class="button_purple">VISIT WEBSITE</button>
+                    <button class="button_purple">CALL VENUE</button>
+                  </div>
+                  <div class="venu_address">
+                    <p>Address:</p>
+                    <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                    <button class="button_purple">Google MAP</button>
+                  </div>
+                  <div class="venu_open">
+                    <p>Opening hours:</p>
+                    <p>10am- 5pm</p>
+                  </div>
+                </div>
+                <a href="" class="readmore sp">Read more</a>
+              </div>
+            </li>
+        </ul>
+
+        <!-- <ul class="row">
+          <li class="col-12 col-lg-3 col-md-6 fillter " data-category="restaurant_cafe" data-kidplay="t">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -119,29 +550,31 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p>A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Art_Culture">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter"  data-category="art_culture" data-kidplay ="t">
             <div class="filler_info">
               <p class="aculture">Art & Culture</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -151,126 +584,131 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Shopping">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter " data-category="shopping" data-kidplay ="f">
             <div class="filler_info">
               <p class="shopping">Shopping</p>
-              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Nightlife">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="nightlife" data-kidplay ="f">
             <div class="filler_info">
               <p class="nlife">Nightlife</p>
-              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
+          </li>
 
-          <div class="col-12 col-lg-3 col-md-6 filter Art_Culture">
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="art_aulture" data-kidplay ="f">
             <div class="filler_info">
               <p class="aculture">Art & Culture</p>
-              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Restaurant_Cafe">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="restaurant_cafe" data-kidplay ="t">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -280,61 +718,64 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Shopping">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="shopping" data-kidplay ="f">
             <div class="filler_info">
               <p class="shopping">Shopping</p>
-              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Shopping">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="shopping" data-kidplay ="t">
             <div class="filler_info">
               <p class="shopping">Shopping</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -344,30 +785,32 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
+          </li>
 
-          <div class="col-12 col-lg-3 col-md-6 filter Restaurant_Cafe">
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="restaurant_cafe" data-kidplay ="t">
             <div class="filler_info">
               <p class="resta">Restaurant/Cafe</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -377,29 +820,31 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Art_Culture">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="art_culture" data-kidplay ="t">
             <div class="filler_info">
               <p class="aculture">Art & Culture</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -409,29 +854,31 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Shopping">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="shopping" data-kidplay ="t">
             <div class="filler_info">
               <p class="shopping">Shopping</p>
               <div><img src="img/kid_icon.jpg" alt=""></div>
@@ -441,70 +888,84 @@ THE RUGBY MATCHES</h4>
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-          <div class="col-12 col-lg-3 col-md-6 filter Nightlife">
+          </li>
+          <li class="col-12 col-lg-3 col-md-6 filter" data-category="nightlife" data-kidplay ="f">
             <div class="filler_info">
               <p class="nlife">Nightlife</p>
-              <!-- <div><img src="img/kid_icon.jpg" alt=""></div> -->
             </div>
             <div class="container_venu">
               <div class="venu_pic">
                 <img src="img/yokohama_venus.jpg" class="img-responsive" alt="">
               </div>
               <h3>Stay beneath the railway tracks</h3>
-              <p class="venu_dis_visible">A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
-              <a href="" class="readmore">Read more</a>
-              <div class="venu_name">
-                <p>Venue name:</p>
-                <p>Tinys Yokohama Hinodecho</p>
+              <p >A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded A cheerful diner and bar near the international Stadium Yokohama, which gets especially crowdedA cheerful diner and bar near the international Stadium Yokohama, which gets especially crowded</p>
+              <div class="mob_d">
+                <div class="venu_name">
+                  <p>Venue name:</p>
+                  <p>Tinys Yokohama Hinodecho</p>
+                </div>
+                <div class="venu_contact">
+                  <p>Contact:</p>
+                  <button class="button_purple">VISIT WEBSITE</button>
+                  <button class="button_purple">CALL VENUE</button>
+                </div>
+                <div class="venu_address">
+                  <p>Address:</p>
+                  <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
+                  <button class="button_purple">Google MAP</button>
+                </div>
+                <div class="venu_open">
+                  <p>Opening hours:</p>
+                  <p>10am- 5pm</p>
+                </div>
               </div>
-              <div class="venu_contact">
-                <p>Contact:</p>
-                <button class="button_purple">VISIT WEBSITE</button>
-                <button class="button_purple">CALL VENUE</button>
-              </div>
-              <div class="venu_address">
-                <p>Address:</p>
-                <p>2-166 Hinodecho, Naka-ku, Yokohama Kanagawa</p>
-                <button class="button_purple">Google MAP</button>
-              </div>
-              <div class="venu_open">
-                <p>Opening hours:</p>
-                <p>10am- 5pm</p>
-              </div>
+              <a href="" class="readmore sp">Read more</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul> -->
       </div>
     </div>
-    <div class="tab-pane fade ggmap" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="tab-pane fade ggmap" id="pills-profile" role="tabpanel" aria-labelledby="pills-map-tab">
       <div id="map"></div>
     </div>
   </div>
   <footer class="text-center align-middle">
     <div class="container">
-      <p class="align-middle">Copyright Ⓒ 2019 ORIGINAL Inc. </p>
+      <div class="row">
+        <div class="col-md-2 col-12">
+          <div class="footer_logo">
+            <img src="img/footer_logo2x.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-8 col-12 text-center copy_r">
+          <div>
+            <p class="align-middle">Copyright Ⓒ 2019 ORIGINAL Inc. </p>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139056125-1"></script>
@@ -518,9 +979,7 @@ THE RUGBY MATCHES</h4>
 
     gtag('config', 'UA-139056125-1');
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&size=480x360"> </script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&callback=initMap"> -->
-  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzmtZ4deyZY4oiz7iCpkGfbrXFE7MGFO0&callback=initMap"></script>
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/script.js"></script>

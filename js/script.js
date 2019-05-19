@@ -67,36 +67,106 @@ $(document).ready(function(){
     });
 });
 
+// $(document).ready(function(){
+//
+//
+//
+//     $(".filter-button").click(function(){
+//
+//         var value = $(this).attr('data-filter');
+//         if(value == "all")
+//         {
+//             //$('.filter').removeClass('hidden');
+//             $('.filter').show('1000');
+//         }
+//         else
+//         {
+// //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+// //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+//             $(".filter").not('.'+value).hide('3000');
+//             $('.filter').filter('.'+value).show('3000');
+//
+//         }
+//     });
+//
+//     if ($(".filter-button").removeClass("active")) {
+// $(this).removeClass("active");
+// }
+// $(this).addClass("active");
+//
+// });
+
 $(document).ready(function(){
 
+  // $('.inner_tab_container').on('click','input[type="checkbox"]',function(){
+  //     var inputvalue = $(this).val();
+  //     console.log(inputvalue);
+  //     if($(this).is( ":checked" )){
+  //
+  //         $('.filter[data-'+inputvalue+']').each(function(){
+  //             var attributValue = $(this).attr('data-'+inputvalue+'');
+  //             if(attributValue != 't'){
+  //                 $(this).hide();
+  //             }
+  //         });
+  //     }
+  //     else{
+  //     //Show all (this still needs to check what other options are still selected)
+  //         $('.filter[data-'+inputvalue+']').show();
+  //     }
+  //
+  // });
+  //
+  // $('.drop_down_filter').on('change','.fillters', function(){
+  //
+  //     var selectedValue = $(this).val();
+  //     $(".filter[data-category]").each(function(){
+  //         var data_categ = $(this).attr('data-category');
+  //         if (data_categ.indexOf(selectedValue) < 0){
+  //             $(this).hide();
+  //         }else{
+  //             //Show all (this still needs to check what other options are still selected)
+  //             $(this).show();
+  //         }
+  //         if(selectedValue == 'showall' || selectedValue == 'category'){
+  //             //Show all (this still needs to check what other options are still selected)
+  //             $(this).show();
+  //         }
+  //     });
+  // });
 
 
-    $(".filter-button").click(function(){
+// var $products =$('.filter'),
+// $checks = $('.inner_tab_container input[type="checkbox"]'),
+// $category = $('.inner_tab_container select.fillters');
+//
+// $('.drop_down_filter').on('change','.fillters', function(){
+//   var $lis = $products,
+//   category = $category.val(),
+//   $checked = $checks.filter(':checked');
+//
+// if(category != 'showall' || category != 'category'){
+//   $lis = $lis.filter(function() {
+//       return $(this).data('category').indexOf(category) >= 0;
+//     });
+// }
+//
+//
+// if ($checked.length) {
+//     $checked.each(function() {
+//       $lis = $lis.filter('[data-' + $(this).val() + '="t"]');
+//     }).get();
+//   }
+//
+//   $lis.show();
+//    $products.not($lis).hide()
+//
+// });
 
-        var value = $(this).attr('data-filter');
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
 
-        }
-    });
 
-    if ($(".filter-button").removeClass("active")) {
-$(this).removeClass("active");
-}
-$(this).addClass("active");
 
 });
-
-
 
 
 
@@ -105,19 +175,102 @@ $(document).ready(function(){
            if($(this).prop("checked") == true){
            }
            else if($(this).prop("checked") == false){
-               
+
            }
        });
    });
 
+
+
 $('.readmore').click(function(){
   event.preventDefault();
-
   var $el = $(this);
   var $p = $el.parent();
-if($p.children('h3+p')){
-  console.log('yes');
-  $p.children('h3+p').toggleClass('venu_dis_visible venu_dis_invisible');
+  if($p.children('p+.mob_d')){
+  $p.children('p+.mob_d').toggleClass('mob_drop_vis mob_drop');
 }
-  // $p.children('.venu_dis_visible').css( 'height', '90px' );
+});
+
+
+//tab
+
+$(document).ready(function(){
+  $('#pills-map-tab').click(function(){
+$('#pills-map-tab img').attr('src', 'img/map_view.png');
+$('#pills-venu-tab img').attr('src', 'img/picture_view_disable.png');
+$('.drop_down_filter').css('display' ,'none');
+$('.plus').css('display', 'none');
+$('.checkbox').css('display', 'none');
+$('.kids_lable').css('display' ,'none');
+
+if ($(window).width() < 500) {
+    $('.tab_container').css('width', '80px');
+}else if($(window).width() > 500){
+  $('.tab_container').css('width', '180px');
+}
+
+    });
+    $('#pills-venu-tab').click(function(){
+  $('#pills-map-tab img').attr('src', 'img/map_viewdisable.png');
+  $('#pills-venu-tab img').attr('src', 'img/picture_view.png');
+  $('.drop_down_filter').show();
+  $('.plus').show();
+  $('.checkbox').show();
+  $('.kids_lable').show();
+
+  if ($(window).width() < 500) {
+      $('.tab_container').css('width', '100%');
+  }else if($(window).width() > 500 && $(window).width() <= 768){
+    $('.tab_container').css('width', '400px');
+  }else if($(window).width() > 769 && $(window).width() <= 1200){
+    $('.tab_container').css('width', '600px');
+  }
+  else if($(window).width() > 1200 ){
+    $('.tab_container').css('width', '660px');
+  }
+      });
 })
+
+
+
+
+
+
+
+
+
+
+
+
+$('.checkbox').on('click','input[type="checkbox"]',function(){
+	var inputvalue = $(this).val();
+	if($(this).is( ":checked" )){
+		$('li[data-'+inputvalue+']').each(function(){
+			var attributValue = $(this).attr('data-'+inputvalue+'');
+			if(attributValue != 't'){
+				$(this).hide();
+			}
+		});
+	}
+	else{
+	//Show all (this still needs to check what other options are still selected)
+	    $('li[data-'+inputvalue+']').show();
+	}
+});
+
+$('#refine').on('change','.category', function(){
+	var selectedValue = $(this).val();
+	$("li[data-category]").each(function(){
+		var data_categ = $(this).attr('data-category');
+		if (data_categ.indexOf(selectedValue) < 0){
+			$(this).hide();
+		}else{
+            //Show all (this still needs to check what other options are still selected)
+			$(this).show();
+		}
+		if(selectedValue == 'showall'){
+            //Show all (this still needs to check what other options are still selected)
+			$(this).show();
+		}
+	});
+});
