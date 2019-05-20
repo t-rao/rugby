@@ -152,16 +152,16 @@ var iconBase = 'https://t-rao.github.io/rugby/img/';
 
 var icons = {
           restaurant: {
-            icon: iconBase + 'cafe2x.png'
+            icon: iconBase + 'cafe.png'
           },
           culture: {
-            icon: iconBase + 'culture2x.png'
+            icon: iconBase + 'culture.png'
           },
           shopping: {
-            icon: iconBase + 'shopping2x.png'
+            icon: iconBase + 'shopping.png'
           },
           nightlife: {
-            icon: iconBase + 'night_life2x.png'
+            icon: iconBase + 'night_life.png'
           }
         };
 
