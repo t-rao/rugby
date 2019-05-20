@@ -1,4 +1,15 @@
 // Google map custom code
+$(".navbar-toggle").on("click", function() {
+
+  $(".overlay").fadeIn("slow");
+
+});
+
+$(".overlay").on("click", function() {
+
+  $(this).fadeOut();
+  $(".navbar-collapse").removeClass("in").addClass("collapse")
+})
 
 function initMap() {
 
@@ -133,16 +144,15 @@ function initMap() {
   // to the map type control.
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      lat: 35.444395,
-      lng: 139.639374
+      lat: 35.509999,
+      lng: 139.606394
     },
     zoom: 13,
     mapTypeControl: false,
   });
 
   var contentString = '<div id="content">'+
-        '<h1>Yokohama Stadium</h1>'+
-        '</div>';
+        '<img width="70" src="img/05_yokohama.jpg"/>'+'<h3>International Stadium Yokohama</h3>'+'<a class="modal_button-02">Official Website</a>'+'</div>';
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
@@ -180,9 +190,30 @@ var icons = {
                     position: new google.maps.LatLng(35.447556, 139.638958),
                     type: 'nightlife'
                   }
+                  , {
+                    position: new google.maps.LatLng(35.464790, 139.624809),
+                    type: 'restaurant'
+                  }
+                  , {
+                    position: new google.maps.LatLng(35.455502, 139.638899),
+                    type: 'nightlife'
+                  }
+                  , {
+                    position: new google.maps.LatLng(35.455810, 139.633045),
+                    type: 'culture'
+                  }
+                  , {
+                    position: new google.maps.LatLng(35.447939, 139.629922),
+                    type: 'restaurant'
+                  }, {
+                    position: new google.maps.LatLng(35.437869, 139.645370),
+                    type: 'nightlife'
+                  }
+
+
                 ];
 
-  var yokohama_stadium = {lat: 35.443346, lng: 139.640061};
+  var yokohama_stadium = {lat: 35.509999, lng: 139.606394};
   var markerstadium = new google.maps.Marker({
       position: yokohama_stadium,
       animation: google.maps.Animation.DROP,

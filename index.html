@@ -12,6 +12,57 @@
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+  /* .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(207,123,123);
+  background-color: rgba(207,123,123, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+} */
+  </style>
 </head>
 
 <body>
@@ -21,16 +72,64 @@
         <a class="navbar-brand" href="#"> <img src="img/logo2x.png" alt=""/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+        </button>
+          <!--dummy starts here -->
+          <!-- <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <ul class="navbar-nav ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">TOP <span class="sr-only">(current)</span></a
+                  >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  STADIUM <i class=""> <img src="img/caret2x.png" alt=""></i>
+                </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#"><span>1</span> Sapporo Dome</a>
+                <a class="dropdown-item" href="#"><span>2</span> Kamaishi Recovery Memorial Stadium</a>
+                <a class="dropdown-item" href="#"><span>3</span> Kumagaya Rugby Stadium</a>
+                <a class="dropdown-item" href="#"><span>4</span> Tokyo Stadium</a>
+                <a class="dropdown-item" href="#"><span>5</span> International Stadium Yokohama</a>
+                <a class="dropdown-item" href="#"><span>6</span> Shizuoka Stadium Ecopa</a>
+                <a class="dropdown-item" href="#"><span>7</span> City of Toyota Stadium</a>
+                <a class="dropdown-item" href="#"><span>8</span> Hanazono Rugby Stadium</a>
+                <a class="dropdown-item" href="#"><span>9</span> Kobe Misaki Stadium</a>
+                <a class="dropdown-item itemnum" href="#"><span>10</span> Fukuoka Hakatanomori Stadium</a>
+                <a class="dropdown-item itemnum" href="#"><span>11</span> Kumamoto Stadium</a>
+                <a class="dropdown-item itemnum" href="#"><span>12</span> Oita Stadium</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  CITY <i class=""> <img src="img/caret2x.png" alt=""></i>
+                </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="city_top.html">Yokohama</a>
+                <a class="dropdown-item" href="#">Saitama</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+              </ul>
+
+            </div>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="navbar-toggler-icon"></span></span> -->
+
+        <!--dummy ends here -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul class="navbar-nav ">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">TOP <span class="sr-only">(current)</span></a
-                >
+              <a class="nav-link" href="index.html">TOP <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="countdown.html">COUNTDOWN <span class="sr-only">(current)</span></a
-                  >
+                <a class="nav-link" href="countdown.html">COUNTDOWN <span class="sr-only">(current)</span></a>
                 </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">ABOUT</a>
@@ -77,21 +176,21 @@
         <div class="inner_map">
           <h1>Japan Rugby Special</h1>
           <h3>Things to do in the 12 cities hosting the world cup matches</h3>
-          <a href="" class="waterdrop twelve" data-toggle="modal" data-target="#myModal"><img src="img/pin-12.png" alt=""></a>
-          <a href="" class="waterdrop eleven" data-toggle="modal" data-target="#myModal"><img src="img/pin-11.png" alt=""></a>
-          <a href="" class="waterdrop ten" data-toggle="modal" data-target="#myModal"><img src="img/pin-10.png" alt=""></a>
-          <a href="" class="waterdrop nine" data-toggle="modal" data-target="#myModal"><img src="img/pin-9.png" alt=""></a>
-          <a href="" class="waterdrop eight" data-toggle="modal" data-target="#myModal"><img src="img/pin-8.png" alt=""></a>
-          <a href="" class="waterdrop seven" data-toggle="modal" data-target="#myModal"><img src="img/pin-7.png" alt=""></a>
-          <a href="" class="waterdrop six" data-toggle="modal" data-target="#myModal"><img src="img/pin-6.png" alt=""></a>
-          <a href="" class="waterdrop five" data-toggle="modal" data-target="#myModal"><img src="img/pin-5.png" alt=""></a>
-          <a href="" class="waterdrop four" data-toggle="modal" data-target="#myModal"><img src="img/pin-4.png" alt=""></a>
-          <a href="" class="waterdrop three" data-toggle="modal" data-target="#myModal"><img src="img/pin-3.png" alt=""></a>
-          <a href="" class="waterdrop two" data-toggle="modal" data-target="#myModal"><img src="img/pin-2.png" alt=""></a>
-          <a href="" class="waterdrop one" data-toggle="modal" data-target="#myModal"><img src="img/pin-1.png" alt=""></a>
+          <a href="" class="waterdrop twelve animated12 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-12.png" alt=""></a>
+          <a href="" class="waterdrop eleven  animated11 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-11.png" alt=""></a>
+          <a href="" class="waterdrop ten  animated10 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-10.png" alt=""></a>
+          <a href="" class="waterdrop nine  animated9 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-9.png" alt=""></a>
+          <a href="" class="waterdrop eight  animated8 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-8.png" alt=""></a>
+          <a href="" class="waterdrop seven  animated7 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-7.png" alt=""></a>
+          <a href="" class="waterdrop six  animated6 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-6.png" alt=""></a>
+          <a href="" class="waterdrop five  animated5 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-5.png" alt=""></a>
+          <a href="" class="waterdrop four  animated4 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-4.png" alt=""></a>
+          <a href="" class="waterdrop three  animated3 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-3.png" alt=""></a>
+          <a href="" class="waterdrop two  animated2 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-2.png" alt=""></a>
+          <a href="" class="waterdrop one  animated1 fadeInDown" data-toggle="modal" data-target="#myModal"><img src="img/pin-1.png" alt=""></a>
         </div>
       </div>
-      <div class="col-lg-4 col-md-12 col-sm-12 stadium_list">
+      <div class="col-lg-4 col-md-12 col-sm-12 stadium_list fadeInDown2">
         <ul class="row">
               <li class="col-lg-12">
                 <a href="#"><span>1</span> Sapporo Dome </a>
@@ -497,7 +596,16 @@
                   }
                 ]
   });
-  </script>
-</body>
 
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+  </script>
+
+</body>
 </html>
